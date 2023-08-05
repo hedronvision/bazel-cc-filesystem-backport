@@ -16,7 +16,7 @@ At least at the time of writing, most Apple developers will target OSs older tha
 
 **How does this solve my problem?**
 
-Just use the setup snippet below, `#include "backport/filesystem.hpp"` and then use fs:: as a drop-in replacement for std::filesystem in code that might target Apple platforms. [If you want to open a fstream(fs::path), instead do fs::fstream(fs::path).]
+Just use the setup snippet below, `#include "backport/filesystem.hpp"` and then use fs:: as a drop-in replacement for std::filesystem in code that might target Apple platforms.
 
 Under the hood, we're falling back to [gulrak/filesystem](https://github.com/gulrak/filesystem) (only) in binaries that need it. [gulrak/filesystem](https://github.com/gulrak/filesystem) is API-compatible with std::filesystem, so you can write the same modern code you would otherwise, and, once std::filesystem support is ubiquitous, it'll be easy to transition off this shim. (Once upon a time, we fell back on boost::filesystem, but there were enough differences in the API to be very annoying, especially around time, despite boost::filesystem having inspired std::filesystem.)
 
@@ -62,10 +62,9 @@ Add `"@hedron_std_filesystem_backport"` to your `deps`, and...
 #include "backport/filesystem.hpp"
 
 fs::path p = ...
-fs::ofstream(p) << ...
 ```
 
-The API is the same as std::filesystem (and fstream), just under fs::
+The API is the same as std::filesystem, just under fs::
 
 See https://en.cppreference.com/w/cpp/filesystem for API docs.
 
