@@ -25,7 +25,7 @@ cc_library(
     visibility = ["//visibility:public"]
 )
 """,
-        url = "https://github.com/gulrak/filesystem/archive/42ea4fc6159d6078f08f1b0531a45d88b9e2c989.zip", # Living at head because there are good, unreleased commits.
-        sha256 = "a58199928d2cd293f0c8d821302e01dd80033fa15c2db6815325b8196578eeb8",
-        strip_prefix = "filesystem-42ea4fc6159d6078f08f1b0531a45d88b9e2c989/include",
+        url = "https://github.com/gulrak/filesystem/archive/9fe68b91c7b7c96c44d7de827a2a4835b82e55f2.zip", # Living at head because there are good, unreleased commits.
+        sha256 = "46b5bee6cb85530794a6724538d728251134a6008ec87928df02f2dcd981ac3e",
+        strip_prefix = "filesystem-9fe68b91c7b7c96c44d7de827a2a4835b82e55f2/include",
     )
